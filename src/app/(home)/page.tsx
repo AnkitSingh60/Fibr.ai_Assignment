@@ -14,10 +14,11 @@ interface UserData {
 
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
-  const updatedData = localStorage.getItem("landingPages");
+  // const updatedData = localStorage.getItem("landingPages");
 
   const [landingPages, setLandingPages] = useState<any[]>([]);
   const [userData, setUserData] = useState<UserData>();
+  const [landingPagesUpdated, setLandingPagesUpdated] = useState(false);
 
   const router = useRouter();
 
@@ -43,8 +44,8 @@ export default function Home() {
     if (storedData) {
       setLandingPages(JSON.parse(storedData));
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [updatedData]);
+
+  }, [landingPagesUpdated]);
 
   const openAddUserModal = () => {
     setIsOpen(true);
@@ -54,6 +55,7 @@ export default function Home() {
     const updatedPages = landingPages.filter((page) => page.id !== id);
     setLandingPages(updatedPages);
     localStorage.setItem("landingPages", JSON.stringify(updatedPages));
+    setLandingPagesUpdated(!landingPagesUpdated);
   };
 
   const handleView = (id: number) => {
@@ -69,6 +71,7 @@ export default function Home() {
     );
     setLandingPages(updatedPages);
     localStorage.setItem("landingPages", JSON.stringify(updatedPages));
+    setLandingPagesUpdated(!landingPagesUpdated);
   };
 
   const DataPreviewTable = () => {
@@ -188,7 +191,7 @@ export default function Home() {
 
   return (
     <main className="flex min-h-screen flex-col pt-4">
-      <CreateForm isOpen={isOpen} setIsOpen={setIsOpen} />
+      <CreateForm onLandingPageCreated={() => setLandingPagesUpdated(!landingPagesUpdated)} isOpen={isOpen} setIsOpen={setIsOpen} />
 
       {landingPages.length > 0 ? (
         <>

@@ -12,6 +12,7 @@ import { useRouter } from "next/navigation";
 type Props = {
   isOpen: boolean;
   setIsOpen: (isOpen: boolean) => void;
+  onLandingPageCreated: () => void;
 };
 
 interface LandingPage {
@@ -44,6 +45,7 @@ export default function CreateForm(props: Props) {
     setTitle("");
     setDescription("");
     props.setIsOpen(false);
+    props.onLandingPageCreated();
   };
 
   return (
