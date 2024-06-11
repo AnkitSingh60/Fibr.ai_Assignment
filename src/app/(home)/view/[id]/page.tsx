@@ -4,6 +4,7 @@ import PageHeader from "@/components/PageHeader";
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 interface LandingPage {
   id: number;
@@ -153,7 +154,9 @@ const ViewPage = () => {
                   transform="translate(24 24)"
                   clipPath="url(#2ade4387-9c63-4fc4-b754-10e687a0d332)"
                 >
-                  <img
+                  <Image
+                  width={316}
+                  height={316}
                     src="/landing_page.png"
                     alt="landing_logo"
                   />

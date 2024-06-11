@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import ToastContainer from "@/components/ToastContainer";
 import toast from "react-hot-toast";
+import Image from "next/image";
 
 export default function LogInPage() {
   const router = useRouter();
@@ -30,6 +31,7 @@ export default function LogInPage() {
   }, []);
 
   useEffect(() => {
+    //@ts-ignore
     if (userData?.isAuthenticated === true) {
       router.push("/");
     } else {
@@ -42,7 +44,9 @@ export default function LogInPage() {
       <section className="bg-gray-50 dark:bg-gray-900">
         <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto h-screen lg:py-0">
           <span className="flex items-center mb-6 text-2xl font-semibold text-gray-900 dark:text-white">
-            <img className="w-8 h-8 mr-2" src="/fibr_logo.jpg" alt="logo" />
+            <Image
+                  width={316}
+                  height={316} className="w-8 h-8 mr-2" src="/fibr_logo.jpg" alt="logo" />
             Fibr.ai
           </span>
           <div className="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">

@@ -108,6 +108,7 @@ export default function RootLayout(props: Props) {
                       src={"/fibr_logo.jpg"}
                       alt="logo"
                     />
+                     <h1 className="text-white ml-4 font-bold text-2xl">Fibr.ai</h1>
                   </div>
                   <nav className="mt-5 space-y-1 px-2">
                     {navigation.map((item) => {
