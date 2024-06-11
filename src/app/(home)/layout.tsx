@@ -14,10 +14,16 @@ type Props = {
   children: React.ReactNode;
 };
 
+interface UserData {
+  email: string;
+  password: string;
+  isAuthenticated: boolean;
+}
+
 export default function RootLayout(props: Props) {
   const router = useRouter();
 
-  const [userData, setUserData] = useState();
+  const [userData, setUserData] = useState<UserData>();
   const pathname = usePathname();
 
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -144,6 +150,7 @@ export default function RootLayout(props: Props) {
                           onClick={() => router.push("/settings?tab=0")}
                           className="text-sm font-medium text-white cursor-pointer"
                         >
+                          
                           {userData?.email}
                         </p>
                         <p

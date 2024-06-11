@@ -6,12 +6,18 @@ import { useRouter } from "next/navigation";
 import { sliceText } from "@/shared/utils";
 import PageHeader from "@/components/PageHeader";
 
+interface UserData {
+  email: string;
+  password: string;
+  isAuthenticated: boolean;
+}
+
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
   const updatedData = localStorage.getItem("landingPages");
 
   const [landingPages, setLandingPages] = useState<any[]>([]);
-  const [userData, setUserData] = useState();
+  const [userData, setUserData] = useState<UserData>();
 
   const router = useRouter();
 
@@ -29,6 +35,7 @@ export default function Home() {
     } else {
       router.push("/");
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [userData]);
 
   useEffect(() => {
