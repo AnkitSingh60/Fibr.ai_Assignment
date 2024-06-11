@@ -6,31 +6,52 @@ First, run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+# Fibr.ai
+Project: Fibr.ai assignment
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
+## Technology Stack Used
+- Next.JS
+- JavaScript
+- CSS
+- React.JS
+- Tailwind UI
+- Tailwind CSS
 
-To learn more about Next.js, take a look at the following resources:
+#ScreenShots
+- Login screen
+  <img src="https://github.com/AnkitSingh60/Fibr.ai_Assignment/assets/93372584/4ae43dd1-539e-4c16-a39a-725322c38b3f" style="width: 100%; max-width: 100%; height: auto" title="Click to enlarge picture" />
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Home screen
+  <img src="https://github.com/AnkitSingh60/Fibr.ai_Assignment/assets/93372584/b1a786f2-f9d9-4262-9ab2-7570bc8f987f" style="width: 100%; max-width: 100%; height: auto" title="Click to enlarge picture" />
+  
+  - Home screen when no data
+  <img src="https://github.com/AnkitSingh60/Fibr.ai_Assignment/assets/93372584/1d0042e6-3762-471f-b62f-e48cdc890c0b" style="width: 100%; max-width: 100%; height: auto" title="Click to enlarge picture" />
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+  - Create landing page
+  <img src="https://github.com/AnkitSingh60/Fibr.ai_Assignment/assets/93372584/1fe6ec2e-cc2b-4c78-ae28-796f8359b0c7" style="width: 100%; max-width: 100%; height: auto" title="Click to enlarge picture" />   
 
-## Deploy on Vercel
+- Preview screen
+    <img src="https://github.com/AnkitSingh60/Fibr.ai_Assignment/assets/93372584/c05a5ff4-880e-4753-9158-5856a417a268" style="width: 100%; max-width: 100%; height: auto" title="Click to enlarge picture" />
+    
+- Preview screen when no data
+  <img src="https://github.com/AnkitSingh60/Fibr.ai_Assignment/assets/93372584/f98ffc77-5241-456f-887a-0c31e95c6f8f" style="width: 100%; max-width: 100%; height: auto" title="Click to enlarge picture" />
+  
+- Update screen
+  <img src="https://github.com/AnkitSingh60/Fibr.ai_Assignment/assets/93372584/33dc4e79-4e0f-45a3-9d79-a4516c1d98c5" style="width: 100%; max-width: 100%; height: auto" title="Click to enlarge picture" />
+  
+- PUpdate screen when no data
+  <img src="https://github.com/AnkitSingh60/Fibr.ai_Assignment/assets/93372584/fb31b785-a934-45ee-b1b8-c0d0ba21caf2" style="width: 100%; max-width: 100%; height: auto" title="Click to enlarge picture" />  
+  
+  
+  ### End
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+  
+### Limitations:
+All screens are fully responsive.
+Handeling errors.
+Handeling testcases.
